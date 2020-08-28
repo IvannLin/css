@@ -1,1 +1,6 @@
 /css.iml
+/out/
+*/**/*.iml
+*/**/*.jsp
+
+/.idea/
