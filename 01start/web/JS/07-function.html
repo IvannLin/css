@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //函数就是一段代码,我们给它起个名字,放起来以后可以用
+    //js有很多内置函数,能帮助我们实现很多有用的功能
+    //function print(msg){document.write(msg);}
+    //function max(a,b){return a>b?a:b;}
+    let u=42;
+    let v=21;
+function max(a,b){
+    return a>b?a:b;  //return表示返回给调用max函数的地方
+}
+     let test01 = max(u,v);
+    alert(test01);
+
+function print(s){
+    document.write(s);
+}
+    print("nihao");
+function println(s){
+    //document.write(s+"<br>");  这样代码相同或者代码几乎完全相同,
+    // 如果以后要把document.write换成其他,就要在print和println里面都要做修改,所以不可以这样
+    //写程序的时候尽量基于自己已经定义好的函数来做新的函数,尽量把程序分作很多个小的函数来做
+    print(s+"<br>1");  //既然print已经提供一个功能可以直接做document.write,那在这里就用print
+}
+function gcd(u,v) {
+    let a = u;
+    let b = v;
+    let temp = v;
+    while (v != 0) {
+        temp = u % v;
+        u = v;
+        v = temp;
+    }
+    return u;//我们调用gcd函数的时候,可以自己决定是弹出对话框还是显示在页面当中,这样gcd函数就返回一个值,不会直接显示出什么内容
+}
+
+    //函数变量:
+    //var f=new Function("x","y","return x*y");
+    //等价于
+    //function f(x,y){return x*y;}
+function add(a,b){
+    return a+b;
+    }
+function cal(f,a,b){
+    return f(a,b);
+    }
+println(cal(add,5,6));
+    //print(a+"和"+b+"的最大公约数是:"+u+"<br>");  //如果需要显示到对话框就将print改成alert
+
+println(max(42,21)); //从这里返回到调用函数的地方
+println(u+"和"+v+"的最大公约数是:"+gcd(u,v));
+//(gcd(42,21));
+//gcd(42,21);
+//gcd(42,22);
+</script>
+
+<script>
+//变量空间 作用域不同
+    //定义在任何函数之外的变量属于全局(整个网页)空间,在网页的任何地方都可以使用
+    //定义在某个函数的内部的变量属于局部(函数内部)空间,只在函数内部有效
+    //局部有和全局重名的变量时,采用局部的
+</script>
+
+</body>
+</html>

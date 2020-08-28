@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断</title>
+</head>
+<body>
+<script>
+    let age=16;
+    document.write("你的年龄是"+age)
+
+    if(age>18)
+    {//如果表达式结果为true,执行这里的语句
+        alert("成年啦");
+    }
+    else
+    {//如果表达式结果为FALSE,执行这里的语句
+        alert("还小呢")
+    }
+    alert("年龄决定了你的精神世界,好好珍惜吧")
+</script>
+<script>
+    let pass=60;
+    let score=59;
+    if(score<pass)
+    {
+        alert("很遗憾,你的成绩没有及格");
+    }
+
+//else永远是和它离得最近的if联系在一起
+    else
+    {
+        alert("恭喜你,这个成绩及格了");
+
+        alert("再见");
+    }
+</script>
+
+</body>
+</html>

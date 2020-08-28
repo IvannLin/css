@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//当你需要放一些数据,特别是每个数据将通过一个对应的索引数字来访问时,需要数组-->
+<!--//var marks=new array();-->
+<!--//marks[0]=  -->
+<!--//marks[1]=  -->
+
+<!--
+    创建数组
+    var a=new array();  在创建数组时 如果不知道数组里面的元素有多少时就用 new array
+    var b=new array(size); 这个size不是规定最大值,是我们希望一开始是多大
+    var c=new array(d1,d2,...,dn);   把所有的数据给它,如果只有一个数据,默认为new array(size)
+    new d=[d1,d2,...,dn]. []里面的内容表示依次交给数组,从0开始
+-->
+<!--
+    访问数组
+    []运算符访问数组中的一个单元
+    a[0],可以读也可以写
+    索引从0开始
+    a[x]=n直接创建了数组中的一个单元x,并且赋值n
+    -->
+
+<!--  -->
+<script>
+    let colors=["red","blue","green"];
+    alert(colors[0]);
+    alert(colors[2]);
+    alert(colors[3]);
+    colors[2]="black";
+    colors[3]="Brown";
+    alert(colors[1]);
+    alert(colors[2]);
+    alert(colors[3]);
+
+    let type=["red","blue","green"];
+    type.length=4;   //length可以直接把后面的数据拿掉
+    alert(type[3]);
+    type[type.length]="black";
+    type[type.length]="brown";
+    alert(type[4]);
+    //let  names=[];
+    //alert("type.length="+type.length);  //a.length给出数组a的长度,是其中最大的下标+1
+    //alert("names.length="+names.length);
+    //type[4]="Brown"
+    //alert("type.length="+type.length);//
+</script>
+<script>
+    //转换数组为字符串
+    let color=["red","blue","green"];
+    alert(color.toString());   //调用tostring函数
+    alert(color.valueOf());
+    alert(color);
+    alert(color.join(","));  //数据都拿出来 并用,隔开
+    alert(color.join("||"));  //数据都拿出来 并用||隔开
+</script>
+
+<script>
+    //堆栈:先进后出,
+    let num=new Array();
+    let count=num.push("red","green");
+    alert(count);
+    count=num.push("black");
+    alert(count);
+    let item=num.pop();
+    alert(item);
+    alert(num.length);
+    //队列:先进先出
+    let item=num.shift();
+    //排序
+    let values=[0,1,5,10,15];
+    values.sort();
+    alert(values);
+    //数组的连接 colors2=colors.concat("yellow",["black","brown"])
+    //数组的截取 colors3=colors.slice(1,4); 表示取1-3,不包括4
+    //splice(开始删除,删除个数,插入元素)
+        //删除 splice(0,2)
+        //插入 splice(2,0,"red","green")
+        //替换 splice(2,1,"red',"green")
+</script>
+</body>
+</html>

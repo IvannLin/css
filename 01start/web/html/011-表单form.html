@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单form</title>
+	</head>
+	<body>
+		<!--
+			1.表单有什么用?
+				收集用户信息,表单展现之后,用户填写表单,点击提交按钮提交数据给服务器
+			2.怎么画一个表单?
+				用form标签
+			3.一个网页中可以有多个表单form
+			4.表单最终要提供数据给服务器,action属性指定"服务器地址-路径",
+			action属性用来指定数据提交给哪个服务器,
+			action属性和超链接href的属性一样.都可以向服务器发送请求
+			5.http://198.50.420.3:8080/oa/save这是请求路径
+			表单最终提交给198.50.420.3机器上的8080端口对应的软件.
+		-->
+		
+		<form action="http://198.50.420.3:8080/oa/save">百度一下
+			<!--画一个提交按钮,这个按钮可以提交表单-->
+			<!--画按钮可以使用input输入域,type="submit"表示该按钮是个提交按钮,具有提交表单的 能力-->
+			<!--对于按钮来说,按钮的value属性用来指定按钮上显示的文本信息-->
+			<input type="submit" value='登陆'/>
+			
+			<!--type="button"这是一个普通的提交按钮,不具备提交表单的能力-->
+			<input type="button" value='设置按钮上显示的文本' />
+		</form>
+		
+		<a href="http://www.baidu.com">百度</a>
+		
+		<!--这个按钮和普通按钮的超链接没太大区别
+			超链接和表单都可以向服务器发送请求,只不过表单发送的请求可以携带数据
+		-->
+		<form action="http://www.baidu.com">
+			<input type="text" />
+			<input type="submit" value='百度'/>
+			
+		</form>
+		<br>
+		<br>
+		<br>
+		<form action="http://localhost:8080/oa/jd/login">
+			用户名<input type="text" /><br>
+			密码<input type="password" /><br>
+			<input type="submit" value='登陆' />
+		</form>
+		<br>
+		<br>
+		
+		<!--
+			1.表单是以社么格式提交数据给服务器的?
+			http://localhost:8080/oa/jd/login?username=13&userpsd=123
+			格式:action?name=value&name=value&name=value&name=value&name.....
+			W3C的http协议规定的,必须以这种格式提交给服务器
+			
+			重点强调表单项写了name属性的,一律会提交给服务器,不想提交这一项就不要写name属性..
+		-->
+		
+		<form action="http://localhost:8080/oa/jd/login">
+			<table>
+				<tr>
+					<td>用户名</td>
+					<td><input type="text" name="username"/></td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td><input type="password" name="userpsd">/</td>
+				</tr>
+				<tr align="center">
+					<td colspan="2">
+						<input type="submit" value='登陆' />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="reset" value='清空' />
+						<input type="submit" value='取消' />
+					</td> 
+			</table>
+		</form>
+		
+		
+		
+		
+		
+		<form action=""></form>
+	</body>
+</html>

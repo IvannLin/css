@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload=function(){
+        document.getElementById("btn").onclick=function(){
+            //获取用户名
+            let username=document.getElementById("username").value;
+            //去除前后空白
+            username=username.trim()
+            //测试
+            alert("--->"+username+"<---")
+        }
+    }
+</script>
+
+
+<input type="text" id="username">
+<input type="button" value="获取用户名" id="btn">
+</body>
+</html>

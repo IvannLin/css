@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height:30px;
+            width:100px;
+            line-height: 30px;
+            border-radius: 5px;
+            color:#000;
+            background-color: silver;
+            transition:all is linear
+        }
+        /*div:hover{*/
+        /*    color:white;*/
+        /*    background-color: #45B823;*/
+        /*}*/
+        div:hover{
+            animation:mycolor 5s linear;
+        }
+    </style>
+</head>
+<!--
+    transition属性:将元素的某个属性从"一个值"在指定的时间内过渡到"另一个值"
+                    transition-property  属性名/all,对哪个属性进行变化
+                    transition-duration 持续时间
+                    transition-timing-function 过渡使用的函数方法
+                    transition-timing-function:linear  匀速
+                                                ease   慢快慢
+                                                ease-in   慢快
+                                                ease-out  快慢
+                                                ease-in-out  慢快慢
+                    transition-delay
+     动画  使用@keyframes animation属性
+                    -->
+<body>
+<div>web design</div>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.JSON是什么?以及作用
+    //  javascript object Notation,是javascript的对象标记,简称JSON
+    // 作用是:(数据交换格式)
+    //2.JSON是一种标准的轻量级的数据交换格式.
+    //  特点是:体积小,易解析
+    //3.在实际的开发中,有两种数据交换使用最多,其一是JSON,另一个是XML
+    //  XML体积大 解析麻烦,但是优点是:语法严谨,通常银行相关的系统之间进行数据交换会使用XML
+    //4.JSON的语法格式:
+    //  let jsonObj={
+    //        "属性名":属性值,
+    //        "属性名":属性值,
+    //  }
+
+    //创建JSON对象 JSON也可以称为无类型对象,轻量级 轻巧 体积小 易解析
+    let jsonObj = {
+        "sNo":"110",
+        "sName":"张三",
+        "sex":"男"
+    }
+    //访问JSON对象的属性
+    alert(jsonObj.sNo+","+jsonObj.sName+","+jsonObj.sex);
+
+
+    student=function(sNo,sName,sex){
+        this.sNo=sNo;
+        this.sName=sName;
+        this.sex=sex;
+    }
+    let stu = new student("111","李四","男");
+    alert(stu.sNo+","+stu.sName+","+stu.sex)
+
+
+    //JSON数组
+    // let students = [
+    //     {"sNo":"110"},{"sName":"张三"},{"sex":"男"}
+    //     {"sNo":"120"},{"sName":"李四"},{"sex":"男"}
+    //     {"sNo":"130"},{"sName":"王五"},{"sex":"男"}
+    //     ]
+    // for (let i = 0; i <students.length ; i++) {
+    //     let stuObj = students[i];
+    //     alert(stuObj.sNo+","+stuObj.sName+","+stuObj.sex);
+    // }
+</script>
+
+</body>
+</html>

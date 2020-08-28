@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        font-size: 14px;
+
+    }
+   #container{
+       margin:0 auto;
+       width:1000px;
+       height:500px;
+       /*background-color:cornflowerblue;*/
+   }
+   #header{
+       height:100px;
+       background-color: #0099ff;
+       margin-bottom: 5px;
+
+   }
+   #main{
+       height:500px;
+       /*background-color:deepskyblue;*/
+       margin-bottom: 5px;
+   }
+    #aside{
+        float:left;
+        width:200px;
+        height:500px;
+        background-color:#0099ff;
+        margin-right: 5px;
+    }
+    #content{
+        float: left;
+        width:695px;
+        height: 500px;
+        background-color: aquamarine;
+
+    }
+   #footer{
+       height:60px;
+       background-color: #0099ff;
+   }
+/*    clear属性:
+            both 清除左右两边的浮动
+            left和right只能清除一个方向的浮动
+            none是默认值,只在需要移除已指定的清除值时用到*/
+</style>
+</head>
+<body>
+    <div id=container>
+        <div id="header"></div>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="content"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

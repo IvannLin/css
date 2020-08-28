@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<!--对浏览器默认的设置清零,取值为0的时候才可以不用写单位
+    *{
+        margin:0;
+        padding:0;
+       }
+-->
+
+<!--
+    margin:1px   只有一个值的时候,默认为四个方向
+    margin:1px 2px  两个值得时候,意思是省掉后面两个值  表示margin:1px 2px 1px 2px
+    margin:1px 2px 3px  三个值的时候,省掉了右边的值,意思是左右相等 表示 margin:1px 2px 3px 2px
+    margin:1px 1px 2px 3px   四个值的时候,顺序为顺时针
+
+    margin的合并:垂直方向合并,水平方向不合并,采用值大的那一个
+    -->
+
+<!--
+    图片文字水平居中 text-align:center
+    div水平居中 margin:()auto    auto为左右两侧的值,浏览器自动计算-->
+<style type="text/css">
+    div{
+        width:100px;
+        height:100px;
+        margin:15px 10px 20px 30px;
+        border:1px solid red;
+    }
+
+    #newsimglist{
+        text-align:center;
+        font-size:0;  /*否则图间有空隙*/
+    }
+    #newsimglist{
+        height:100px;
+        width:100px;
+        margin:5px auto;
+        border:1px solid #0099ff;
+        padding:5px;
+    }
+
+</style>
+<body>
+    <div id="box1">box1</div>  <!--div做出来的效果是独占一行,-->
+    <div id="box2">box2</div>
+
+    <div id="newsimglist">
+        <img src="libai.jpeg">
+        <img src="libai.jpeg">
+        <img src="libai.jpeg">
+    </div>
+    </body>
+</html>

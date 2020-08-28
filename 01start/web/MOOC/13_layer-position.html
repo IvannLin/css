@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border:1px solid none;
+            color:gray;
+        }
+        #box1{
+            width:100px;
+            height:8px;
+            position:relative;
+        }
+        #box2{
+            width:99%;
+            position:absolute;
+            top:0;
+        }
+    </style>
+</head>
+<!--position属性:static 默认值,没有定位,元素出现在正常的流中 top bottom left right z-index无效
+                fixed 固定定位,相对于浏览器进行定位 top bottom left right z-index有效
+                relative 相对定位,相对于其父元素进行定位,top bottom left right z-index有效
+                        定位为relative的元素脱离正常的文档流中,但其在文档流中的原位置依然存在.
+                absolute 绝对定位,相对于static定位以外的第一个父元素进行定位,top bottom left right z-index有效
+                        脱离正常文档流,但是其在正常流中的原位置不再存在.
+                        absolute定位的层总是相对于其最近的定位为absolute或relative的父层,而这个父层并不一定是其直接父层
+                        对于absolute定位的层,如果其父层中都定义absolute或relative,则其将相对body进行定位
+                -->
+<!--前后层的层叠关系:用z-index属性(值大在上面)-->
+<!--父元素使用:position:relative
+    子元素使用:position:absolute
+    这样做的好处是子元素会随着父元素一起移动-->
+<body>
+    <div id="box1">
+        <img src="libai.jpeg">
+        <div id="box2">静夜思李白</div>
+    </div>
+</body>
+</html>

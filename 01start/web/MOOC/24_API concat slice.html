@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    string(arr):将arr中每个元素转为字符串,用逗号隔开
+    固定套路:对数组拍照,用于鉴别是否数组被修改过
+    arr.join("连接符"):将arr中每个元素转为字符串,用自定义的连接符分隔
+-->
+<script>
+    let chars=["h","e","l","l","o"];
+    console.log(chars.join());
+</script>
+<!--
+    固定套路:
+    将字符组成单词:chars.join("") 无缝衔接   判断数组是空数组,arr.join("")
+    将单词组成句子:words.join("")
+    将数组转换为页面元素的内容:
+                            "<开始标签>"+arr.join<"/结束标签><开始标签">+"</结束标签>"-->
+
+<!--拼接:
+    concat()拼接两个或多个数组,并返回结果
+    var new arr=arr1.concat(值1,值2,arr2,值3,...)
+    表示将值1 值2和arr2中每个元素,以及值3都拼接到arr1的元素之后,并且返回新数组.其中arr2先被打散,再拼接
+    -->
+<!--选取:
+    slice()返回现有数组的一个子数组
+    var subArr=arr.slice(starti,endi+1)
+    选取arr中starti位置开始,到endi结束的所有元素组成新数组返回,原数组保持不变
+    凡是两个参数都是下标的函数,都有一个特性:含头不含尾-->
+<!--修改:
+    splice:splice(开始删除,删除个数,插入元素)
+    arr.splice(starti,n)    n表示删除个数
+    删除arr中starti位置开始的n个元素不考虑含头不含尾
+    var deletes=arr.splice(starti,n)
+    返回值deletes保存了被删除的元素组成的临时数组-->
+<!--reverse 只是颠倒顺序,不排序-->
+<!--
+    排序API
+    arr.sort()默认将所有元素转为字符串再排列:只能排列字符串类型的元素-->
+
+</body>
+</html>

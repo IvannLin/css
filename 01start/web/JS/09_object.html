@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+       对象是js的一种复合数据类型,它可以把多个数据集中在一个变量中,并且给其中的每个数据起名字
+       或者说,对象是一个属性集合,每个属性有自己的名字和值,
+
+-->
+<body>
+<script>
+    let o =new Object();
+    o.name="john mike";
+    o.age=30;
+    o.salary=300;
+    for (let x in o){            //o[x]  表示对象o里面叫做x的属性
+        alert(x+"="+o[x]);      //对于一个对象 同样可以当做数组一样来访问里面的属性,只不过下标不是名字了
+    }
+    //对象用{}   数组用[]
+    //删除对象属性:delete book.chapter1;
+    //              book.chapter=null;
+    //遍历所有属性for循环 :for(let x in o);表示对于o这个object里面的每一个属性取出来,循环的每一遍作为一个x给我用,就可以对这个x做一些事情
+</script>
+<script>
+    //构造函数:不直接制造对象,通过this定义成员,没有return
+    function Rect(w,h){
+        this.width=w;this.height=h;
+        this.area=function(){
+            return this.width*this.height;
+        }
+    }
+    let r=new Rect(5,10);
+     let k = new Rect(3, 5);
+    alert(r.area()+"jfkdjf"+k.width);
+    r.width=10;
+    alert(k.area());
+</script>
+
+<script>
+    //原型对象:对象的prototype属性指定了它的原型对象,可以用运算符直接读它的原型对象的属性,
+    //当写这个属性时才在它自己内部产生实际的属性
+</script>
+</body>
+</html>

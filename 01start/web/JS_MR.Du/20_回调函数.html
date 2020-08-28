@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="回调函数" onclick="hello()">
+    <script>
+        function hello() {
+            alert("回调")
+        }
+    </script>
+
+
+
+    <input type="button" value="回调函数2" id="mybtn">
+    <script>
+        function dosome(){
+            alert("dosome");
+        }
+
+        let btnObj = document.getElementById("mybtn");
+        btnObj.onclick = dosome; //注意:此处dosome后面不能加()
+    </script>
+
+
+    <input type="button" value="回调函数3" id="mybtn3">
+    <script>
+        let mybtn3 = document.getElementById("mybtn3");
+        mybtn3.onclick = function () {  //这个叫匿名函数,是一个回调函数
+            alert("test........")
+        }
+    </script>
+
+    <input type="button" value="回调函数4" id="mybtn4">
+    <script>
+        document.getElementById("mybtn4").onclick = function () {
+            alert("test2.......")
+        }
+
+    </script>
+</body>
+</html>

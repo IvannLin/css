@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+<!--标签选择器,p em表示p标签里面的em的区间内显示指定样式,p>em表示只有紧挨着p的那个em可以,
+-->
+        p,th,td{border:1px red dashed}
+        p em{background-color: aqua}
+        p>em{background-color: aqua}
+        h1+p{background-color: aqua}
+        a:visited {color:black}
+
+    /*类选择器:前面可以有具体的html的标记名,*表示所有此类*/
+        p.important{color:red }
+        *[title]{color:coral}
+    /* id选择器   */
+
+
+    </style>
+</head>
+<body>
+<!--
+style="margin:和周围所有东西都保持所设置的距离
+两个相邻的元素它们的外边距是连在一起的,给出各自的距离,不是把两个值加起来,而是取两者之间值最大的
+-->
+
+<!--
+元素定位:普通流 浮动 绝对定位
+CSS的定位用的属性:position
+-->
+
+
+<div>
+    <h1>我的字体</h1>
+    <a href="http://news.163.com">网易新闻</a>
+    <p title="hello"><i>第<em>一</em>段</i></p>
+    <p class="important">第二段</p>
+</div>
+
+
+<!--style="float浮动定位-->
+<div>
+    <img src="bi.png" width="500px"
+    style="float:left"></img>
+<!--position:relative  相对定位,保留原来位置然后偏移-->
+    <p style="position:relative;left:-20px;bottom:-30px;">第一段</p>
+<!--position:absolute  绝对定位,不保留原来位置,它的下一行上移,并且重新给它定位-->
+    <p style="position:absolute;left:-20px;bottom:-10px;">第二段</p>
+    <p style="margin:10px 50px 50px 10px;">第三段</p>
+</div>
+
+<!--
+border-collapse:collapse 两条线合并成一条线
+border-collapse:seperate;两条线分开的
+
+
+
+caption-side:表头所在位置
+
+
+
+
+table-layout:auto;auto为默认的,把表格中所有的单元拿到后,从table到/table中分析每一列该有多宽,
+和每个行高
+table-layout:fixed;根据第一行单元格的大小来计算整个表格的列宽该是多少,
+优点是可以比较快的把第一行表格列出来.
+-->
+<table style="border:1px red dashed;
+    caption-side:bottom;
+    border-collapse:collapse;
+    table-layout:auto;">
+<caption>成绩</caption>
+    <tr>
+<!--
+vertical-align表格中上下对齐,
+text-align:左右对齐-->
+        <th>语文</th>
+        <th>数学</th>
+        <th>物理</th>
+        <th>化学</th>
+    </tr>
+    <tr>
+        <td>82</td>
+        <td>85</td>
+        <td>75</td>
+        <td>99</td>
+    </tr>
+</table>
+
+</body>
+</html>

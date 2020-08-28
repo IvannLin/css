@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        /*and前后有空格*/
+        @media screen and (min-width:768px){
+            body{
+                background-color: red;
+            }
+        }
+        @media screen and (min-width:992px){
+            body{
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+    响应式布局:检测设备信息,设备宽度不同,布局不同阅读体验很好
+    响应式布局的实现方式:CSS3   media query媒体查询
+                      第三方开源框架   bootstrap
+-->
+<!--媒体查询:
+    怎样使用媒体查询来完成响应式布局?
+    viewport视口:显示网页的区域
+    视口规定:布局视口=设备视觉视口.不可缩放
+    meta:vp扩展  meta name="viewport" content="width=device-width"
+    媒体查询:检查设备宽度,根据宽度设置CSS样式-->
+<!--bootstrap:写很少代码 实现多终端的页面适配
+    英文官网:https://getbootstrap.com/
+    中文官网:https://www.bootcss.com/
+    来自twitter公司,目前是bootstrap第四版本
+    开源(源代码开放免费) 移动优先的前端框架(首先考虑移动端设备的兼容性)
+
+    栅格系统:
+    -->
+    <div class="row">
+<!--     表示当前列合并了八个单元格
+ 四种屏幕尺寸:col-xs  <768
+            col-sm  >=768<992
+            col-md  >=992>1200
+            col-lg  >1200
+            -->
+        <div class="col-md-8">...</div>
+    </div>
+
+
+</body>
+</html>

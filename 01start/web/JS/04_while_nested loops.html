@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环</title>
+</head>
+<body>
+<script>
+    //while语句让同一段代码可以重复执行很多次,一直进行到FALSE之后,开始执行下一段代码
+    //count必须是在变化的,不然就没有条件结束,无限循环
+    let count=0;
+    let limit=5;
+    while(count<=limit){
+        // alert("count目前= "+ count);
+        console.log("count目前= "+ count);
+        count++;
+    }
+    let total=6;
+    let max=1;
+    while(total>max){
+        total=total/2;
+        alert("当前合计:"+ total)
+    }
+</script>
+<script>
+    //做无限循环的时候要注意循环条件永远满足不了的时候 会导致网页卡死
+    let end=1;
+    while(end!=5){
+        end=end+2;
+        alert(end);
+    }
+</script>
+
+<script>
+    let num=2;
+    let race=0;
+    while(num>1){
+        num=num/2;
+        race++;
+    }
+    alert(race);
+</script>
+
+
+<script>
+    //代码执行有先后顺序
+    let start=3;
+    while(start>0){
+    alert(start);
+    start--;
+    }
+    alert("发射!");
+</script>
+
+<script>
+    let u=42;
+    let v=21;
+    let temp=v;
+    while(v!=0){
+        temp=u%v; //temp=0
+        u=v;  //u=21
+        v=temp; //v=0
+    }
+    alert("u和v的最大公约数是:"+u);
+</script>
+
+</body>
+</html>

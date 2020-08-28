@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+    全局对象:浏览器的全局对象是window
+    所有全局的变量实际上是window的成员
+    -->
+<!--
+    window.document表示浏览器窗口中的html页面,
+    window.document()将内容写入页面
+    页面中的元素就是document里的成员-->
+
+<!--在<script>的src属性或archive可以指定外部文件-->
+
+<!--事件处理器:<p onMouseOver="alert(hi);" 表示鼠标经过时会做怎样的动作-->
+<!--事件:onload/onunload   onmouseover/onmouseout   onclick/ondblclick
+        onsubmit
+        -->
+
+<!--简单对话框: alert
+confirm 可以选择yes or no
+prompt出来一个数据框 可以输入一个名字
+-->
+
+<!--状态栏
+status
+defaultstatus-->
+<body>
+<script>
+    if (confirm("还要继续吗")){
+        alert("好,继续")
+    }else{
+        alert("好吧,再见")
+    }
+let name=prompt("你的名字是");
+    alert(name)
+</script>
+<p onMouseOver="alert('hi');" onmouseout="alert('bye');">
+    一个段落
+</p>
+<p onMouseOver="status='网易云学习';" onmouseout="status='';">
+
+
+<script>
+    let answer=12;
+    alert(window.answer);
+
+    for(x in window.document)
+        document.write(x+"<br>")
+
+
+</script>
+
+</body>
+</html>

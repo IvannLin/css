@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套if else语句</title>
+</head>
+<body>
+<script>
+    //if else简写
+    let a = true;
+    alert(!a);
+    a==true?alert("a是真"):alert("a是假");
+
+    //if else 嵌套
+    let num1=56;
+    let num2=27;
+    let num3=42;
+    if(num1<num2) {
+        if(num1<num3){
+            min=num1;
+        }
+        else{
+            min=num3;
+        }
+    }  else{
+        if(num2<num3){
+            min=num2;
+        } else{
+            min=num3;
+        }
+    }
+
+    alert("最小值是:"+min);
+
+    // if (num1==56){
+    //     alert("hello");
+    // }else {
+    //
+    // }
+</script>
+<script>
+//    if else 级联
+    let type=2;
+    if(type==1)
+        alert("你好");
+    else if (type==2)
+        alert("早上好");
+    else if (type==3)
+        alert("晚上好");
+    else if (type==4)
+        alert("再见");
+    else
+    {
+        alert("啊?什么啊?");
+    }
+</script>
+<script>
+    //break;表示在这个case里面做完了,要离开这个switch 如果不加 会继续往下执行下面的case中的代码
+    let t=5;
+    switch(t){
+        case 1:
+            alert("你好");
+            break;
+        case 2:
+            alert("再见");
+            break;
+        default:
+            alert("啊?什么啊?")
+    //        如果不写default  没有匹配的case 则什么也不做 离开switch
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    JS变量名命名
+    不允许使用js的关键字和保留关键字
+    由字母 数字 下划线及$组成
+    不能以数字开头
+    可以采用"驼峰命名法",大小写掺杂
+    -->
+<!--
+    数据类型:
+            原始类型:数字类型(number)
+                    字符串类型(string类型):文字字符数据,由Unicode字符.数字 标点组成
+                                \u4e00:汉字的起始字符;
+                                \u9fa5:汉字的结束字符;
+                                \n  换行
+                                \r  回车
+                                \t  一个制表符
+                    布尔类型(Boolean):用于表示条件的结果.true/FALSE
+                    空(null):声明对象未赋值
+                    未定义(undefined):声明变量未赋值,访问对象不存在的属性
+                    -->
+<!--
+    数据隐式转换:函数:typeof()或typeof
+    NaN:表示不是一个数字
+        isNaN 判断用 数据是否为 非数字,是否为一个数字
+        结果为Boolean:true/FALSE
+    所有的数据类型与string做+运算时,最后的结果都为string-->
+<!--toString()函数可以将任意类型的数据转化为string类型,
+    变量toString()会得到一个全新的结果,类型为string
+    例如: var num=15
+          var str=num+''
+          -->
+<!--
+    parseInt()
+    整型:integer
+    作用:获取 指定数据的 整数部分
+    语法:var result=parseInt(数据)
+    parseInt,从左向右依次转换,碰到第一个非整数字符,则停止转换,
+        如果第一个字符就是整数的话 结果为NaN
+        -->
+<!--
+    console.log 要打印的话
+    -->
+
+<!--parseFloat
+    作用:将指定数据转换成小数
+    语法:var result=parseFloat(数据)-->
+<!--number():如果包含非数字字符,不管在哪里出现,则一定会返回NaN-->
+<!--关系运算符
+    == 判断等于    !=不等于,不比较类型 只比较数值
+    ===全等        !==不全等,除数值之外,连同类型也会一起比较
+    关系表达式的运算结果为Boolean类型-->
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+
+    alert("start")
+    for (let i = 0; i <3 ; i++) {
+        console.log("进入外层for循环: i="+i)
+        for (let j = 0; j <5 ; j++) {
+            for (let k = 0; k <3 ; k++) {
+                count++; //count=count+1
+                console.log("进入内层for循环: j="+j+"   count= "+count);
+            }
+
+
+
+        }
+    }
+    console.log("bye")
+    //for循环 计数循环(init初始动作;  condition循环条件; step循环每一步的动作)
+    //当循环的次数预先知道,或者需要有递进的动作的时候,往往选择for循环
+    // for ( let i=0;i<5;i=i+1){
+    //     alert(i);
+    // }
+</script>
+</body>
+</html>
+
+<!--
+    while(true){}
+    do{}while(true)
+    for( ; ; ){}
+-->
+<!--
+    while do和for循环的功能是等价的
+    如果循环至少需要执行一次,do通常是最好的选择,(必须执行一次)
+    当循环的次数是固定的,或者很容易计算得到的时候,选择for循环(有固定次数)
+    其他情况用while
+-->
+
+<!--
+    break 跳出循环
+    continue 跳过当前循环步,进入循环的下一轮
+-->

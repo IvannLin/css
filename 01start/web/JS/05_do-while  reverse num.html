@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //do 大括号里面是循环体,while后面是条件,
+    //do-while先做循环体里面的语句,在判断条件是否满足,如果条件满足,回去继续重复,做完在判断条件是否满足,
+    //假如条件不满足,离开此循环
+    //do-while和while循环的区别:while循环的判断是前面的,先判断,再进去
+    //                        do-while先进去,再判断
+    //如果希望循环至少做一次,就应该用do-while
+    // let count=3;
+    // do{
+    //     alert(count);
+    //     count--;
+    // }while(count>5);  api 库 框架
+    // alert("发射")
+</script>
+<script>
+    
+    let num=23871;
+    let reverse=0;
+    do{
+        let lastDigit=num%10;
+        reverse=(reverse*10)+lastDigit;
+        num = parseInt( num/10 ) ;
+    }while(num>1);
+    alert("数字颠倒的结果是"+reverse);
+</script>
+
+</body>
+</html>

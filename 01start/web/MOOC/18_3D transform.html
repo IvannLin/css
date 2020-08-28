@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    transform-style:preserve-3d
+    transform属性:rotateX()
+                  rotateY()
+                  rotateZ()
+     透视:perspective属性,近大远小,像素值越小表示离舞台越近,像素值越大表示离舞台越远-->
+
+<!--父容器:旋转
+            transform-style:preserve-3d
+     舞台:透视关系 眼睛到舞台的距离
+            perspective:100px-->
+    <style>
+        #stage{
+            width:1000px;
+            margin:100px auto;
+            perspective:100px;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            float:left;
+            transition: linear 1s;
+            transform-style:preserve-3d;
+        }
+        img{
+            width:100px;
+            height:75px;
+        }
+        .x:hover{
+            transform: rotateX(60deg);
+        }
+        .y:hover{
+            transform: rotateY(60deg);
+        }
+        .z:hover{
+            transform: rotateZ(60deg);
+        }
+        body{
+            background-color: cornflowerblue;
+        }
+    </style>
+<body>
+<div id="stage">
+    <div class="box x">
+        <img src="dragon.jpg">
+    </div>
+    <div class="box y">
+        <img src="dragon.jpg">
+    </div>
+    <div class="box z">
+        <img src="dragon.jpg">
+    </div>
+</div>
+
+</body>
+</html>

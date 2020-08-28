@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //关于JS中内置的支持类;date 可以用来获取时间/日期
+    //获取当前系统时间
+    let nowTime = new Date();
+    // alert(nowTime);
+    // document.write(nowTime);
+    //转换成具有本地语言环境的日期格式
+    nowTime = nowTime.toLocaleString();
+    document.write(nowTime);
+    document.write("<hr>")
+
+
+    //当以上格式不是自己想要的,可以通过日期获取年月日信息,自定义日期格式
+    let T = new Date();
+    let year = T.getFullYear();//全格式的年信息
+    let month = T.getMonth(); //月份是0-11
+    //let dayOfWeek=T.getDay();   //获取的是一周的第几天(0-6)
+    let day = T.getDate()   //获取日信息
+    document.write(year+"年"+(month+1)+"月"+day+"日");
+    document.write("<hr>")
+
+    //获取毫秒数(从1995年1月1日 00:00:00 000到当前系统时间的总毫秒数)
+    let times=T.getTime();
+    //document.write(times+"毫秒");  //一般会使用毫秒数当时间戳timestamp
+    document.write(new Date().getTime());
+
+</script>
+
+
+<br><br><br>
+<input type="button" value="显示当前系统时间" onclick="start();">
+<input type="button" value="停止" onclick="stop();">
+    <div id="timeDiv"></div>
+<br><br><br>
+<script>
+    function displayTime(){
+        let time=new Date;
+        let sTime=time.toLocaleString();
+        document.getElementById("timeDiv").innerHTML=sTime;
+    }
+
+    //每隔一秒调动displayTime()函数;
+    function start(){
+        //let v表示局部变量  不加let
+        v=window.setInterval("displayTime()",1000);
+    }
+    function stop(){
+        window.clearInterval(v)
+    }
+
+</script>
+</body>
+</html>

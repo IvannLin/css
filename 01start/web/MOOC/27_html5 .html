@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    添加音频audio,
+    支持mp3 wav ogg格式的音频文件
+    <audio src="pepaa.mp3" control="controls">
+    浏览器不支持html5:audio
+    </audio>
+
+    添加视频 video,
+    支持mp4 webm ogg格式视频文件
+    playPause控制视频播放暂停
+-->
+<script>
+    let v=document.getElementById("myVideo");
+    function playPause(){
+        if(v.paused)
+            v.play();
+        else
+            v.pause()
+    }
+</script>
+<!--     canvas绘图:定义画布-->
+<!--               设置画布样式-->
+<!--               js准备绘图上下文环境-->
+<!--               js绘图-->
+
+    <canvas id="myCanvas" width="860" height="480" border:1px solid black;> /*长度宽度不带px*/
+    浏览器不支持画布
+    </canvas>
+
+
+</body>
+</html>

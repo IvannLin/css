@@ -1,0 +1,129 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-size: 16px;
+    color:#673929;
+}
+#container{
+    width:900px;
+    margin:0 auto;
+}
+#header{
+    height:220px;
+    margin-bottom: 5px;
+    position: relative;
+}
+#icon-list{
+    position:absolute;
+    top:170px;/*距离父元素上方距离*/
+    right:30px;
+    width:130px;
+    height:30px;
+    /*font-size:0;!*四个小图标间隙为0*!*/
+}
+#nav{
+    height:30px;
+    margin-bottom: 5px;
+    line-height:30px;/*垂直水平居中*/
+    background-color:#0099cc;
+    font-size:18px/30px;/**/
+    color:white;
+    letter-spacing: 2px;
+    text-align: center
+}
+#nav a{
+    text-decoration: none;
+}
+a:link{
+    color:white;
+}
+a:visited{
+    color:white;
+}
+a:hover{
+    color:yellow;
+}
+a:active{
+    color:yellow;
+}
+#main{
+    background-color: black;
+    /*height:2050px;!*根据内容算出来的,等内容确定后可以删掉*!*/
+}
+#sidebar{
+    float:left;
+    width:300px;
+    height:700px;
+    background-color: #66ccff;
+    text-align: center;
+    font-size: 14px;
+}
+#imglist{
+    width:130px;
+    margin:0 auto;
+}
+.pol{
+    width:85px;
+    padding:10px;
+    background-color:#eeeeee;
+    border:1px solid #bfbfbf;
+    box-shadow:2px 2px 4px #eeeeee;
+    border-radius: 5px;
+}
+#imglist img{
+    height:95px;
+    width:85px;
+    margin:0 auto;
+}
+.rotate-left{
+    transform: rotate(7deg);
+}
+.rotate-right{
+    transform: rotate(-7deg);
+}
+
+#content{
+    float:right;
+    background-color:#ccffff;
+    width:590px;
+    /*height:2050px;*/
+    margin-bottom: 5px;
+}
+.subcon{
+    width:570px;
+    margin:10px auto;
+    clear:both;
+}
+.subcon img{
+    margin:5px;
+    padding:5px;
+    float:left;
+    border:1px dashed black;
+}
+.subcon subtext{
+    width:60%;
+    float:left;
+    margin:5px;
+}
+.subcon h2{
+    margin:5px;
+}
+.subcon p{
+    font:16px/2em 微软雅黑;
+
+}
+#footer{
+    height:60px;
+    width:900px;/**/
+    line-height: 60px;/*高度和行高相同值,footer部分的文字就会垂直居中对齐*/
+    background-color: #66ccff;
+    clear:both;/*为了不让footer移上去,设置clear属性*/
+    text-align: center;
+}
+#fix{
+    position:fixed;
+    top:100px;
+    left:5px;
+}

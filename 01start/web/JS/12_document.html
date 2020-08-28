@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="setInterval('show()',200);">
+<!--document的成员 anchors[]
+                   forms[]
+                   images[]
+                   cookie
+                   title-->
+<img name="libai" height=500 src="libai.jpeg">
+<!--<p name="dancing">-->
+<!--    一个段落-->
+</p>
+<script>
+    // alert(document.images[0].src);
+    // alert(document.getElementsByName("dancing"));   //getElementsByName("dancing"))函数   找到某个元素
+    // alert (document.libai.height);
+    // document.libai.height=50;
+    // for (x in document.libai)
+    //     document.write(x+"<br>");
+</script>
+<script>
+    let imageS=new Array(6);
+    let index=1;
+    for (let i = 0; i <6; i++) {
+        imageS[i]=new image();
+        imageS[i].src=i+",jpg";
+    }
+function show() {
+    document.libai.src=imageS[index].src
+    index=(index+1)%6;
+
+}
+
+//    image对象的src可以改写以装入一副新的图片
+//    可以创建image()对象来提前装载图片
+//    onload事件表明图片装载完成
+</script>
+
+</body>
+</html>

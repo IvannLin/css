@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //json对象的值可以是任意类型
+    let user = {
+        "userCode":110,
+        "username":"张三",
+        "sex":true,
+        "address":{
+            "city":"北京",
+            "street":"大兴区",
+            "zipcode":"121212",
+        },
+        "aiHao":["smoke","drink","tangtou"]
+    };
+
+    //访问人名以及居住的地址
+    alert(user.username+"居住在"+user.address.city);
+
+
+    let jsonData = {
+        "total":3,
+        "students":[
+            {"name":"张三","birth":"1995"},
+            {"name":"李四","birth":"1995"},
+            {"name":"王五","birth":"1995"}
+            ]
+    };
+    alert(jsonData.students.name);
+</script>
+
+</body>
+</html>

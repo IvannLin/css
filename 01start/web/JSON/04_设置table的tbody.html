@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //有这些json数据
+    let data = {
+        "total":4,
+        "emps":[
+            {"empNo":7369,"eName":"smith","sal":800.00},
+            {"empNo":7364,"eName":"smith2","sal":700.00},
+            {"empNo":7366,"eName":"smith3","sal":1000.00},
+            {"empNo":7365,"eName":"smith4","sal":900.00},
+        ]
+    };
+</script>
+    <!--希望把上面这些数据展示到table当中-->
+    <input type="button" value="显示员工信息列表" id="displayBtn">
+    <h2>员工信息列表</h2>
+    <hr>
+    <table border="1px solid black" width="50%">
+        <tr>
+            <th>员工编号</th>
+            <th>员工名字</th>
+            <th>员工薪资</th>
+        </tr>
+        <tbody id="empTbody">
+    <!--
+            <tr>
+                <td>7369</td>
+                <td>smith</td>
+                <td>800.00</td>
+            </tr>
+            <tr>
+                <td>7361</td>
+                <td>smith2</td>
+                <td>800.00</td>
+            </tr>
+            <tr>
+                <td>7364</td>
+                <td>smith3</td>
+                <td>800.00</td>
+            </tr>
+    -->
+        </tbody>
+    </table>
+    总共<span id="count">0</span>条数
+<script>
+    window.onload = function(){
+        let displayBtn=document.getElementById("displayBtn");
+        displayBtn.onclick = function(){
+            let emps = data.emps;
+            let html = "";
+            for (let i = 0; i < emps.length; i++) {
+                let emp = emps[i];
+                html += "<tr>";
+                html += "<td>"+emp.empNo+"</td>";
+                html += "<td>"+emp.eName+"</td>";
+                html += "<td>"+emp.sal+"</td>";
+                html += "</tr>";
+            }
+            document.getElementById("empTbody").innerHTML = html;
+            document.getElementById("count").innerHTML = data.total;
+        }
+    }
+</script>
+
+</body>
+</html>

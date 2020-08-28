@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    DOM是W3C的标准,是中立于平台和语言的接口,它允许程序和脚本动态地访问和更新文档的内容 结构和样式
+    对网页进行增删改查的操作.
+
+    DOM查找:
+    1.按id属性,精确查找一个元素对象
+    let elem=document.getElementById("id")  一定注意大小写
+    getElementById只能用在document
+    不是所有元素都有id 只用于精确查找一个元素
+    2.按标签名找
+    let elems=parent.getElementByTagName("tag");
+    查找指定parent节点下的所有标签为tag的子代节点
+    强调:可用在任意父元素上;
+        不仅查直接子节点,而且查所有子代节点
+        返回一个动态集合,即使只找到一个元素,也返回集合.
+        必须用[0],取出唯一元素
+    3.通过name属性查找
+    document.getElementByName("name属性值")
+    可以返回dom树中具有指定name属性值的所有子元素集合
+    4.通过class查找
+    查找父元素下指定class属性的元素,注意 这种方式有兼容性问题
+    5.通过选择器查找:
+    只找一个元素 let elem=parent.querySelector("selector")
+    注意:selector支持一切css中选择器,
+    如果选择器匹配的有多个 只返回第一个
+    找多个:let elem=parent.querySelectorAll("selector")
+    强调:
+    selector API返回的是非动态集合
+    -->
+<!--
+    dom修改
+    核心DOM四个操作:
+    1.读取属性值 let value=elem.getAttribute("属性名")      get
+    2.修改属性值 elem.setAttribute("属性名",value)          set
+    3.判断是否包含指定属性 let bool=elem.hasAttribute("属性名")布尔类型 true/FALSE      has
+    4.移除属性值 elem.removeAttribute("属性名")             remove
+
+    修改样式:内联样式
+            elem.style.属性名    但是属性名必须 去掉横线 变驼峰,比如background-color >=backgroundColor
+    -->
+<!--
+    DOM添加:
+    添加元素的步骤:创建空元素 设置关键属性 将元素添加到DOM树
+    创建空元素:let elem=document.createElement("元素名")
+    将元素添加到DOM树
+        1.parentNode.appendChild(childNode)  可用于将为一个父元素追加最后一个子节点
+        2.parentNode.insertBefore(newChild,existingChild)  用于在父元素中的指定子节点之前添加一个新的子节点
+
+
+     尽量少的操作dom树,因为每次修改dom树 都导致重新layout
+     添加元素优化对策:
+     1.如果同时创建父元素和子元素时,建议在内存中先将子元素添加到父元素,再将父元素一次性挂到页面
+     2.如果只添加多个平级子元素时,就要将所有子元素,临时添加到文档片段中,再将文档片段整体添加到页面
+     (文档片段 是指内存中,临时保存多个平级子元素的虚拟父元素 用法和普通父元素完全一样)
+     创建片段:let frag=document.createDocumentFragment()
+     将子元素临时追加到frag中:frag.appendChild(child)
+     将frag追加到页面:parent.appendChild(frag)
+     强调:append之后 frag自动释放 不会占用元素-->
+
+</body>
+</html>

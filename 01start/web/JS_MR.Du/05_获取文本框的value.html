@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    window.onload=function(){
+        let btnElt=document.getElementById("btn");
+        btnElt.onclick=function(){
+            alert(document.getElementById("username").value);
+            //可以修改它的value重新赋值
+            document.getElementById("username").value="zhangsan";
+        }
+    }
+</script>
+<input type="text" id="username">
+<input type="button" value="获取文本框属性" id="btn">
+
+<hr>
+<script>
+    window.onload=function(){
+        document.getElementById("setBtn").onclick=function(){
+            //获取第一个文本框value
+            document.getElementById("username2").value=document.getElementById("username1").value;
+        }
+    }
+</script>
+<input type="text" id="username1">
+<br>
+<input type="text" id="username2">
+<br>
+<input type="button" value="将第一个文本框中的value赋值到第二个文本框上" id="setBtn">
+
+<hr>
+<!--blur事件:失去焦点
+    this代表的是当前input节点对象,this.value就是这个节点对象的value属性-->
+<input type="text" onblur="alert(this.value)">
+</body>
+</html>

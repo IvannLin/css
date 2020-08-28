@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload=function(){
+        let aihaos=document.getElementsByName("aihao");
+        let firstCk=document.getElementById("firstCk");
+        firstCk.onclick=function(){
+            // alert(firstCk.checked);
+            //根据name获取所有元素
+
+
+            for (let i = 0; i < aihaos.length; i++) {
+                aihaos[i].checked=firstCk.checked;
+            }
+
+            // if(firstCk.checked){
+            //     //全选
+            //     for (let i = 0; i < aihaos; i++) {
+            //         aihaos[i].checked=true;
+            //     }
+            // }else{
+            //     //取消全选
+            //     for (let i = 0; i < aihaos; i++) {
+            //         aihaos[i].checked=false;
+            //     }
+            // }
+        }
+        //对以上数组进行遍历
+
+
+        for (let i = 0; i < aihaos.length; i++) {
+            aihaos[i].onclick=function(){
+                let checkedCount=0;
+                //总数量和选中的数量相等的时候,第一个复选框选中
+                for (let i = 0; i < aihaos.length; i++){
+                    if(aihaos[i].checked){
+                        checkedCount++;
+                    }
+                }
+                firstCk.checked=(aihaos.length==checkedCount);
+                // if(all == checkedCount){
+                //     firstCk.checked=true;
+                // }else{
+                //     firstCk.checked=false;
+                // }
+            }
+        }
+    }
+</script>
+    <input type="checkbox" id="firstCk"><br>
+    <input type="checkbox" name="aihao" value="smoke">抽烟<br>
+    <input type="checkbox" name="aihao" value="drink">喝酒<br>
+    <input type="checkbox" name="aihao" value="tt">烫头<br>
+
+</body>
+</html>

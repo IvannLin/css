@@ -1,0 +1,17 @@
+a{
+    text-decoration: none;
+}
+
+
+
+/*
+cursor是鼠标样式,pointer和hand都是小手,但是hand有浏览器兼容问题,建议使用pointer
+ */
+#baiduspan{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#myli{
+    list-style-type: circle;
+}

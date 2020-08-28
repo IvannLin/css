@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        alert('内嵌js');
+    </script>
+
+<!--    外部添加单独文件的方式下,script之内不要写其他代码,不会去执行-->
+    <script src="01_jstest.js"></script>
+    <script>
+        function sayhello(){
+            console.log("hello");
+            console.log("world");
+        }
+        sayhello();
+        function add(num1,num2){
+            return(num1+num2)
+        }
+        let result=add(10,20);
+        console.log(result);
+        alert(result);
+    </script>
+</head>
+<body>
+    <button onclick="alert('行内js')">单击试试</button>
+
+
+</body>
+</html>

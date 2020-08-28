@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    数组:元素下标从0开始 到length-1结束-->
+<script>
+    let nums=[59,60,62,68];
+    for (let i = 0; i < nums.length; i++) {
+        nums[i]=10;
+    }
+    // 遍历关联数组只能用 for in循环
+    // for (const numsKey in nums) {
+    //      key只是元素的下标名
+    //      hash[key]当前元素值
+</script>
+<!--索引数组:
+    固定套路:
+    获得数组最后一个元素:arr[arr.length-1]
+    获得倒数第n个元素的位置:arr[arr.length-n]
+    数组缩容:减小arr.length的数值,会删除结尾的多余元素
+    遍历元素:一次访问数组中的每个元素,对每个元素执行相同的操作,
+            for (let i = 0; i < arr.length; i++) {
+                arr[i]  表示当前正在遍历的元素
+        -->
+<!--关联数组:可自定义下标名称的数组,索引数组中的数字下标没有明确的意思,
+            只要希望每个元素都有专门的名称时,都可以
+            创建空数组,向空数组中添加新元素并自定义下标名称
+    关联数组:不能用字符串输出
+    下标是自定义的字符值
+    length属性失效(=0)
+    关联数组可以快速查找元素.
+     由于关联数组的length属性值无法获取其中元素的数量,所以遍历关联数组只能使用for...in循环
+    -->
+
+
+</body>
+</html>
